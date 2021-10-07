@@ -14,6 +14,7 @@ namespace HashTables
         {
             public K Key { get; private set; }
             public D Data { get; private set; }
+            public bool Deleted { get; set; } = false;
 
             public HashTableBucket(K key, D data)
             {
@@ -49,9 +50,19 @@ namespace HashTables
         /// </summary>
         /// <param name="key"></param>
         /// <returns>Index on the table.</returns>
-        protected virtual int GetIndex(K key)
+        protected int GetIndex(K key)
         {
             return key.GetHashCode() % tableSize;
+        }
+
+        /// <summary>
+        /// Index of the table based on key hashcode plus modifier.
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns>Index on the table.</returns>
+        protected int GetIndexWithModifier(K key, int modifier)
+        {
+            return (key.GetHashCode() + modifier) % tableSize;
         }
     }
 }
