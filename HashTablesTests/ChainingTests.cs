@@ -1,13 +1,16 @@
+using HashTables;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace HashTablesTests
 {
     [TestClass]
-    public class HashTablesTests
+    public class LinearProbingTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void InsertAndRetrieve()
         {
+
         }
+
     }
 }
