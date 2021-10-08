@@ -89,7 +89,7 @@ namespace HashTables
         }
 
         /// <summary>
-        /// Searches for the index of the givven key.
+        /// Searches for the index of the given key.
         /// </summary>
         /// <param name="key"></param>
         /// <returns>The index of the found bucket if found, -1 otherwise.</returns>
