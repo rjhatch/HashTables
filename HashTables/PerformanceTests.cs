@@ -15,10 +15,6 @@ namespace HashTables
         List<HTTimes> performanceData = new List<HTTimes>();
         StringBuilder sb = new StringBuilder();
 
-        List<HashTableLinearProbing<int, int>> linearProbingList = new List<HashTableLinearProbing<int, int>>(3);
-        List<HashTableChaining<int, int>> chaingList = new List<HashTableChaining<int, int>>(3);
-        List<HashTableQuadraticProbing<int, int>> quadraticProbingList = new List<HashTableQuadraticProbing<int, int>>(3);
-
         private class HTTimes
         {
             public string name;
